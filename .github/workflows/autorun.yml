@@ -17,7 +17,7 @@ jobs:
           python-version: 3.7
 
       - name: install request
-        run: pip install request -r
+        run: pip install -r requirements.txt
 
       - name: 'auto run'
         run: python SunnyRunning.py
