@@ -104,15 +104,15 @@ SRSres = requests.get(SRSurl, headers=header, data={})
 SRSjson = json.loads(SRSres.content.decode('utf8', 'ignore'))
 
 # Running Sleep
-'''
+
 StartT = time.time()
 for i in range(int(RunTime)):
     time.sleep(1)
-    print("Current Minutes: %d Running Progress: %.2f%%\r" %
-        (i / 60, i * 100.0 / int(RunTime)), end='')
+    # print("Current Minutes: %d Running Progress: %.2f%%\r" %
+    #     (i / 60, i * 100.0 / int(RunTime)), end='')
 print("")
 print("Running Seconds:", time.time() - StartT)
-'''
+
 
 # print(SRSurl)
 # print(SRSjson)
