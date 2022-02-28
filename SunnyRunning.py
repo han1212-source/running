@@ -15,7 +15,7 @@ from email.header import Header
 
 env = os.environ
 # Input Your IMEI Code Here
-IMEI = env['IEMI']
+IMEI = env['IMEI']
 
 def MD5(s):
     return hashlib.md5(s.encode()).hexdigest()
@@ -31,16 +31,16 @@ def encrypt(s):
 # 发送邮件
 def mail():
 	# 第三方 SMTP 服务.具体设置参数请参考邮箱服务商的设置
-	mail_host="smtp.xxx.com"  # 设置服务器
-	mail_user=""    # 用户名
-	mail_pass="."   # 口令
+	mail_host = env['mail_host']  # 设置服务器
+	mail_user = env['mail_user']    # 用户名
+	mail_pass = env['mail_pass']   # 口令
 
-	sender = 'xxx@xxx.com'
-	receivers = ['xxx@xxx.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+	sender = env['mail_sender']
+	receivers = [env['mail_recever']]  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
 
 	message = MIMEText('汉姆出现问题', 'plain', 'utf-8')
-	message['From'] = "xxx<xxx@xxx.com>"
-	message['To'] =  "xxx<xxx@xxx.com>"
+	message['From'] = env['mail_from']
+	message['To'] = env['mail_to']
 
 	subject = '汉姆出现问题'
 	message['Subject'] = Header(subject, 'utf-8')
