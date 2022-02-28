@@ -16,6 +16,9 @@ jobs:
         with:
           python-version: 3.7
 
+      - name: install request
+        run: pip install request -y
+        
       - name: 'auto run'
         run: python SunnyRunning.py
         env:
