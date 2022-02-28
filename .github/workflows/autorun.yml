@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: 'auto run'
         run: python SunnyRunning.py
-        with:
+        env:
           IMEI: ${{ secrets.IEMI }}
           mail_host: ${{ secrets.mail_host }}
           mail_user: ${{ secrets.mail_user }}
