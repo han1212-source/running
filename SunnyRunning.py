@@ -8,12 +8,14 @@ import hashlib
 import random
 import sys
 import smtplib
+import os
 
 from email.mime.text import MIMEText
 from email.header import Header
 
+env = os.environ
 # Input Your IMEI Code Here
-IMEI = ''
+IMEI = env['IEMI']
 
 def MD5(s):
     return hashlib.md5(s.encode()).hexdigest()
