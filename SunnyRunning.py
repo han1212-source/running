@@ -15,7 +15,7 @@ from email.header import Header
 
 env = os.environ
 # Input Your IMEI Code Here
-IMEI = env['IMEI']
+IMEI ='e5f7cc7f92904e4c877b4e42d04be13b'
 
 def MD5(s):
     return hashlib.md5(s.encode()).hexdigest()
