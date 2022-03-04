@@ -22,7 +22,7 @@ jobs:
       - name: 'auto run'
         run: python SunnyRunning.py
         env:
-          IMEI: ${{ secrets.IEMI }}
+          IMEI: ${{ secrets.IMEI }}
           mail_host: ${{ secrets.mail_host }}
           mail_user: ${{ secrets.mail_user }}
           mail_pass: ${{ secrets.mail_pass }}
