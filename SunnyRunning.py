@@ -52,8 +52,6 @@ def mail():
 	print("邮件发送成功")
 
 
-if (len(IMEI) != 32):
-    exit("IMEI Format Error!")
 
 # Generate table Randomly
 alphabet = list('abcdefghijklmnopqrstuvwxyz')
