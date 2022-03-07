@@ -64,7 +64,7 @@ Version = '2.25'
 # Generate Runnig Data Randomly
 RunTime = str(random.randint(720, 1000))  # seconds
 # RunDist = str(2000 + random.randint(0, 3))  # meters
-RunDist = str(1600 + random.randint(0, 3))  # meters
+RunDist = str(2000 + random.randint(0, 3))  # meters
 RunStep = str(random.randint(1300, 1600))  # steps
 
 # Login
